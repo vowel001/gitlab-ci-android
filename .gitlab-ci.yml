@@ -14,7 +14,9 @@ stages:
 - test
 - release
 - deploy
-build:
+
+
+
 lintDebug:
   stage: build
   script:
