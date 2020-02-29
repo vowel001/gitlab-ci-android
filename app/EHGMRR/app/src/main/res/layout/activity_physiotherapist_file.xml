@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.patientFile.PhysiotherapistActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_margin="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="Physiotherapist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:hint="patinet name or phone"
+                android:id="@+id/phys_name_or_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:background="#FF0000"
+                android:textColor="#FFF"
+                android:id="@+id/patient_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                android:text="View patient status" />
+
+            <Button
+                android:background="#FF0000"
+                android:textColor="#FFF"
+                android:id="@+id/view_record"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                android:text="View all patients record" />
+
+            <Button
+                android:background="#FF0000"
+                android:textColor="#FFF"
+                android:id="@+id/update_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                android:text="Update Account" />
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

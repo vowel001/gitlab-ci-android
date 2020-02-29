@@ -1,12 +1,33 @@
-stages:
-  - build
-  - push
+image: jangrewe/gitlab-ci-android
 
+before_script:
+- export GRADLE_USER_HOME=$(pwd)/.gradle
+- chmod +x ./gradlew
+cache:
+  key: ${CI_PROJECT_ID}
+  paths:
+  - .gradle/
+
+
+stages:
+- build
+- test
+- release
+- deploy
 build:
+lintDebug:
   stage: build
   script:
-    - docker build -t dcr.faked.org/gitlab-ci/android:${CI_COMMIT_SHORT_SHA} .
+  - ./gradlew -Pci --console=plain :app:lintDebug -PbuildDir=lint
+assembleDebug:
+  stage: build
+  script:
+  - ./gradlew assembleDebug
 
+testDebug:
+  stage: test
+  script:
+  - ./gradlew -Pci --console=plain :app:testDebug
 push_latest:
   stage: push
   only:

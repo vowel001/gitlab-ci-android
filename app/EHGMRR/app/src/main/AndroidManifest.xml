@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ehgmrr">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".utils.AppMain"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDPEb6SL1m9MrPb1i0urc5hPGsdv0WiBVc" />
+
+        <activity android:name=".ui.filePatient.FilePatientFamilyActivity"/>
+
+        <activity
+            android:name=".ui.googleMap.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".ui.filePatient.FilePatientActivity" />
+        <activity android:name=".ui.viewPatient.ViewPatientActivity" />
+        <activity android:name=".ui.update.UpdateActivity" />
+        <activity android:name=".ui.patientFile.PhysiotherapistActivity" />
+        <activity android:name=".ui.signup.SignupActivity" />
+        <activity android:name=".ui.reset.ResetActivity" />
+        <activity android:name=".ui.login.LoginActivity">
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>
